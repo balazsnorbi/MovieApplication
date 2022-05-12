@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".presentation.detail.MovieDetailActivity">
+
+        <ImageView
+            android:id="@+id/iv_backdrop"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@drawable/test_image2" />
+
+        <ImageButton
+            android:id="@+id/ib_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/app_name"
+            android:padding="8dp"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/iv_poster"
+            android:layout_width="130dp"
+            android:layout_height="190dp"
+            android:layout_margin="16dp"
+            android:contentDescription="@string/app_name"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_backdrop"
+            tools:src="@drawable/test_image" />
+
+        <TextView
+            android:id="@+id/tv_movieTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:maxLines="1"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_poster"
+            app:layout_constraintTop_toBottomOf="@+id/iv_backdrop"
+            tools:text="Finding Nemo" />
+
+        <TextView
+            android:id="@+id/tv_movieDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:maxLines="2"
+            android:textColor="#333333"
+            android:textSize="13sp"
+            app:layout_constraintEnd_toEndOf="@+id/tv_movieTitle"
+            app:layout_constraintStart_toStartOf="@+id/tv_movieTitle"
+            app:layout_constraintTop_toBottomOf="@+id/tv_movieTitle"
+            tools:text="There are 3.7 trillion fish in the ocean. they're looking for one" />
+
+        <TextView
+            android:id="@+id/tv_releaseYear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:layout_constraintStart_toStartOf="@+id/tv_movieDescription"
+            app:layout_constraintTop_toBottomOf="@+id/tv_movieDescription"
+            tools:text="Released in 2016" />
+
+        <TextView
+            android:id="@+id/tv_ratingAndRatingCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColor="@color/black"
+            android:textSize="13sp"
+            app:drawableStartCompat="@drawable/baseline_star_black_18"
+            app:layout_constraintStart_toStartOf="@+id/tv_releaseYear"
+            app:layout_constraintTop_toBottomOf="@+id/tv_releaseYear"
+            tools:text="4.6/10 (2354)" />
+
+        <ImageButton
+            android:id="@+id/iv_favorites"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/baseline_favorite_border_black_18"
+            app:layout_constraintBottom_toTopOf="@+id/line"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/line"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:layout_margin="16dp"
+            android:background="#e4e7eb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_poster" />
+
+        <TextView
+            android:id="@+id/tv_overviewTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/overview"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line" />
+
+        <TextView
+            android:id="@+id/tv_overviewContent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_overviewTitle"
+            tools:text="Marlin, a clown fish is overly cautious with his son, Nemo, who has .." />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

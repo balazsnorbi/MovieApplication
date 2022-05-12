@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">MovieApplication</string>
+
+    <string-array name="tabs_title" tools:ignore="ExtraTranslation">
+        <item>now playing</item>
+        <item>popular</item>
+        <item>top rated</item>
+        <item>upcoming</item>
+    </string-array>
+
+    <string name="favorites">Favorites</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+
+    <string name="rating_asc">Rating Ascending</string>
+    <string name="rating_desc">Rating Descending</string>
+    <string name="release_rate_asc">Release Date Ascending</string>
+    <string name="release_rate_desc">Release Date Descending</string>
+    <string name="search_hint">Enter movie name</string>
+    <string name="overview">Overview</string>
+
+</resources>
